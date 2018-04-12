@@ -1,7 +1,7 @@
 package sample;
 
-import javafx.beans.property.SimpleIntegerProperty;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
 import java.util.ArrayList;
@@ -9,30 +9,47 @@ import java.util.ArrayList;
 public class Controller {
 
     @FXML
-    public Label finalLabel;
+    public Label outputLabel;
+
+    @FXML
+    public Button b1;
 
 
     ArrayList<Double> calcList = new ArrayList<Double>();
 
+    public void operations() {
 
-    public void numbersAddition () {
+        // switch function here
+    }
+
+
+    public void addition() {
         int sum = 0;
         for (double i : calcList) {
             sum += i;
         }
 
-        finalLabel.textProperty().bind(new SimpleIntegerProperty(sum).asString());
+        //outputLabel.textProperty().bind(new SimpleIntegerProperty(sum).asString());
     }
+
 
 
 // inefficient change into one method and add to array
 
-    public void addNumber0 () {
-        calcList.add(0.0);
+    public void enterNumber(java.awt.event.ActionEvent event) {
+
+        // add switch statement
+
     }
 
+    public void addNumber0 () {
+
+    }
     public void addNumber1 () {
-        calcList.add(1.0);
+
+     String output = outputLabel.getText() + b1.getText();
+     outputLabel.setText(output);
+
     }
     public void addNumber2 () {
         calcList.add(2.0);
@@ -61,6 +78,7 @@ public class Controller {
 
     public void clear () {
         calcList.clear();
+
     }
 
 
