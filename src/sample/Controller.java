@@ -22,6 +22,7 @@ public class Controller {
         // switch function here
     }
 
+// A list does not work
 
     public void addition() {
         int sum = 0;
@@ -29,7 +30,19 @@ public class Controller {
             sum += i;
         }
 
-        //outputLabel.textProperty().bind(new SimpleIntegerProperty(sum).asString());
+        String result = Integer.toString(sum);
+
+        outputLabel.setText(result);
+    }
+
+    public void subtraction() {
+        int sum = 0;
+        for (double i : calcList) {
+            sum -= i;
+        }
+        String result = Integer.toString(sum);
+
+        outputLabel.setText(result);
     }
 
 
@@ -46,11 +59,11 @@ public class Controller {
 
     }
     public void addNumber1 () {
-
+     calcList.add(1.0);
      String output = outputLabel.getText() + b1.getText();
      outputLabel.setText(output);
-
     }
+
     public void addNumber2 () {
         calcList.add(2.0);
     }
@@ -78,6 +91,7 @@ public class Controller {
 
     public void clear () {
         calcList.clear();
+        outputLabel.setText("0");
 
     }
 
