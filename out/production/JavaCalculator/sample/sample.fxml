@@ -12,7 +12,7 @@
 
 <AnchorPane prefHeight="461.0" prefWidth="328.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
     <children>
-      <Button layoutX="80.0" layoutY="402.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="83.0" text="Enter" />
+      <Button layoutX="245.0" layoutY="402.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="83.0" text="=" />
       <TabPane layoutY="68.0" prefHeight="332.0" prefWidth="328.0" tabClosingPolicy="UNAVAILABLE" tabMaxHeight="7.976931348623157E307" tabMaxWidth="7.976931348623157E307" AnchorPane.topAnchor="68.0">
         <tabs>
           <Tab text="Integer ">
@@ -33,47 +33,47 @@
                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                               </rowConstraints>
                            <children>
-                              <Button fx:id="b1" mnemonicParsing="false" onAction="#addNumber1" prefHeight="78.0" prefWidth="89.0" text="1">
+                              <Button mnemonicParsing="false" onAction="#enterNumber" prefHeight="78.0" prefWidth="89.0" text="1">
                                  <font>
                                     <Font size="25.0" />
                                  </font></Button>
-                              <Button mnemonicParsing="false" prefHeight="81.0" prefWidth="87.0" text="2" GridPane.columnIndex="1">
+                              <Button mnemonicParsing="false" onAction="#enterNumber" prefHeight="81.0" prefWidth="87.0" text="2" GridPane.columnIndex="1">
                                  <font>
                                     <Font size="25.0" />
                                  </font></Button>
-                              <Button mnemonicParsing="false" prefHeight="82.0" prefWidth="86.0" text="3" GridPane.columnIndex="2">
+                              <Button mnemonicParsing="false" onAction="#enterNumber" prefHeight="82.0" prefWidth="86.0" text="3" GridPane.columnIndex="2">
                                  <font>
                                     <Font size="25.0" />
                                  </font></Button>
-                              <Button mnemonicParsing="false" onAction="#addition" prefHeight="87.0" prefWidth="84.0" text="+" textAlignment="CENTER" GridPane.columnIndex="3">
+                              <Button mnemonicParsing="false" prefHeight="87.0" prefWidth="84.0" text="+" textAlignment="CENTER" GridPane.columnIndex="3">
                                  <font>
                                     <Font size="25.0" />
                                  </font></Button>
-                              <Button mnemonicParsing="false" prefHeight="77.0" prefWidth="84.0" text="4" GridPane.rowIndex="1">
+                              <Button mnemonicParsing="false" onAction="#enterNumber" prefHeight="77.0" prefWidth="84.0" text="4" GridPane.rowIndex="1">
                                  <font>
                                     <Font size="25.0" />
                                  </font></Button>
-                              <Button mnemonicParsing="false" prefHeight="87.0" prefWidth="90.0" text="5" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                              <Button mnemonicParsing="false" onAction="#enterNumber" prefHeight="87.0" prefWidth="90.0" text="5" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                  <font>
                                     <Font size="25.0" />
                                  </font></Button>
-                              <Button mnemonicParsing="false" prefHeight="80.0" prefWidth="85.0" text="6" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                              <Button mnemonicParsing="false" onAction="#enterNumber" prefHeight="80.0" prefWidth="85.0" text="6" GridPane.columnIndex="2" GridPane.rowIndex="1">
                                  <font>
                                     <Font size="25.0" />
                                  </font></Button>
-                              <Button mnemonicParsing="false" prefHeight="79.0" prefWidth="88.0" text="-" GridPane.columnIndex="3" GridPane.rowIndex="1" onAction="#subtraction">
+                              <Button mnemonicParsing="false" prefHeight="79.0" prefWidth="88.0" text="-" GridPane.columnIndex="3" GridPane.rowIndex="1">
                                  <font>
                                     <Font size="25.0" />
                                  </font></Button>
-                              <Button mnemonicParsing="false" prefHeight="92.0" prefWidth="95.0" text="7" GridPane.rowIndex="2">
+                              <Button mnemonicParsing="false" onAction="#enterNumber" prefHeight="92.0" prefWidth="95.0" text="7" GridPane.rowIndex="2">
                                  <font>
                                     <Font size="25.0" />
                                  </font></Button>
-                              <Button mnemonicParsing="false" prefHeight="75.0" prefWidth="94.0" text="8" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                              <Button mnemonicParsing="false" onAction="#enterNumber" prefHeight="75.0" prefWidth="94.0" text="8" GridPane.columnIndex="1" GridPane.rowIndex="2">
                                  <font>
                                     <Font size="25.0" />
                                  </font></Button>
-                              <Button mnemonicParsing="false" prefHeight="79.0" prefWidth="79.0" text="9" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                              <Button mnemonicParsing="false" onAction="#enterNumber" prefHeight="79.0" prefWidth="79.0" text="9" GridPane.columnIndex="2" GridPane.rowIndex="2">
                                  <font>
                                     <Font size="25.0" />
                                  </font></Button>
@@ -81,7 +81,7 @@
                                  <font>
                                     <Font size="25.0" />
                                  </font></Button>
-                              <Button mnemonicParsing="false" prefHeight="76.0" prefWidth="91.0" text="0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                              <Button mnemonicParsing="false" onAction="#enterNumber" prefHeight="76.0" prefWidth="91.0" text="0" GridPane.columnIndex="1" GridPane.rowIndex="3">
                                  <font>
                                     <Font size="25.0" />
                                  </font></Button>
@@ -109,9 +109,9 @@
           </Tab>
         </tabs>
       </TabPane>
-      <Button layoutX="244.0" layoutY="402.0" mnemonicParsing="false" onAction="#clear" prefHeight="54.0" prefWidth="83.0" text="Clear" />
-      <Button layoutX="162.0" layoutY="402.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="83.0" text="Back" />
-      <Label fx:id="outputLabel" alignment="CENTER_RIGHT" layoutX="6.0" layoutY="7.0" prefHeight="54.0" prefWidth="316.0" text="0">
+      <Button layoutY="402.0" mnemonicParsing="false" onAction="#clear" prefHeight="54.0" prefWidth="83.0" text="A/C" />
+      <Button layoutX="162.0" layoutY="402.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="83.0" text="&lt;-" />
+      <Label fx:id="outputLabel" alignment="CENTER_RIGHT" layoutX="6.0" layoutY="7.0" prefHeight="54.0" prefWidth="315.0" text="0">
          <font>
             <Font name="AGaramondPro-Regular" size="35.0" />
          </font>
