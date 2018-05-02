@@ -12,7 +12,7 @@
 
 <AnchorPane prefHeight="461.0" prefWidth="328.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
     <children>
-      <Button layoutX="245.0" layoutY="402.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="83.0" text="=" />
+      <Button layoutX="245.0" layoutY="402.0" mnemonicParsing="false" onAction="#calculations" prefHeight="54.0" prefWidth="83.0" text="=" />
       <TabPane layoutY="68.0" prefHeight="332.0" prefWidth="328.0" tabClosingPolicy="UNAVAILABLE" tabMaxHeight="7.976931348623157E307" tabMaxWidth="7.976931348623157E307" AnchorPane.topAnchor="68.0">
         <tabs>
           <Tab text="Integer ">
@@ -45,7 +45,7 @@
                                  <font>
                                     <Font size="25.0" />
                                  </font></Button>
-                              <Button mnemonicParsing="false" prefHeight="87.0" prefWidth="84.0" text="+" textAlignment="CENTER" GridPane.columnIndex="3">
+                              <Button mnemonicParsing="false" onAction="#calculations" prefHeight="87.0" prefWidth="84.0" text="÷" textAlignment="CENTER" GridPane.columnIndex="3">
                                  <font>
                                     <Font size="25.0" />
                                  </font></Button>
@@ -61,7 +61,7 @@
                                  <font>
                                     <Font size="25.0" />
                                  </font></Button>
-                              <Button mnemonicParsing="false" prefHeight="79.0" prefWidth="88.0" text="-" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                              <Button mnemonicParsing="false" onAction="#calculations" prefHeight="79.0" prefWidth="88.0" text="x" GridPane.columnIndex="3" GridPane.rowIndex="1">
                                  <font>
                                     <Font size="25.0" />
                                  </font></Button>
@@ -77,7 +77,7 @@
                                  <font>
                                     <Font size="25.0" />
                                  </font></Button>
-                              <Button mnemonicParsing="false" prefHeight="84.0" prefWidth="88.0" text="x" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                              <Button mnemonicParsing="false" onAction="#calculations" prefHeight="84.0" prefWidth="88.0" text="-" GridPane.columnIndex="3" GridPane.rowIndex="2">
                                  <font>
                                     <Font size="25.0" />
                                  </font></Button>
@@ -89,7 +89,7 @@
                                  <font>
                                     <Font size="25.0" />
                                  </font></Button>
-                              <Button mnemonicParsing="false" prefHeight="80.0" prefWidth="91.0" text="/" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                              <Button mnemonicParsing="false" onAction="#calculations" prefHeight="80.0" prefWidth="91.0" text="+" GridPane.columnIndex="3" GridPane.rowIndex="3">
                                  <font>
                                     <Font size="25.0" />
                                  </font></Button>
@@ -110,10 +110,15 @@
         </tabs>
       </TabPane>
       <Button layoutY="402.0" mnemonicParsing="false" onAction="#clear" prefHeight="54.0" prefWidth="83.0" text="A/C" />
-      <Button layoutX="162.0" layoutY="402.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="83.0" text="&lt;-" />
-      <Label fx:id="outputLabel" alignment="CENTER_RIGHT" layoutX="6.0" layoutY="7.0" prefHeight="54.0" prefWidth="315.0" text="0">
+      <Button layoutX="162.0" layoutY="402.0" mnemonicParsing="false" onAction="#delete" prefHeight="54.0" prefWidth="83.0" text="&lt;-" />
+      <Label fx:id="outputLabel" alignment="CENTER_RIGHT" layoutX="6.0" layoutY="20.0" prefHeight="41.0" prefWidth="315.0">
          <font>
             <Font name="AGaramondPro-Regular" size="35.0" />
+         </font>
+      </Label>
+      <Label fx:id="auxiliaryLabel" alignment="CENTER_RIGHT" layoutX="6.0" layoutY="4.0" prefHeight="19.0" prefWidth="315.0" textFill="RED">
+         <font>
+            <Font name="AdobeHebrew-Regular" size="13.0" />
          </font>
       </Label>
     </children>

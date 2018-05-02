@@ -5,42 +5,42 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
-import java.util.ArrayList;
-
 public class Controller {
 
     @FXML
     private Label outputLabel;
 
+    @FXML
+    private Label auxiliaryLabel;
 
-    ArrayList<Double> calcList = new ArrayList<Double>();
+    private String operator = "";
 
-// A list does not work
+    private double initialNum = 0;
 
-//    public void addition() {
-//        int sum = 0;
-//        for (double i : calcList) {
-//            sum += i;
-//        }
-//
-//        String result = Integer.toString(sum);
-//
-//        outputLabel.setText(result);
-//    }
+    private Model model = new Model();
 
-//    public void subtraction() {
-//        int sum = 0;
-//        for (double i : calcList) {
-//            sum -= i;
-//        }
-//        String result = Integer.toString(sum);
-//
-//        outputLabel.setText(result);
-//    }
+    public void calculations(ActionEvent event) {
 
-    public void functions() {
+        String operatorVal = ((Button) event.getSource()).getText();
 
+
+        if (!"=".equals(operatorVal)) {
+            if (!operator.isEmpty()) {
+                return;
+            }
+            operator = operatorVal;
+            initialNum = Double.parseDouble(outputLabel.getText());
+            outputLabel.setText("");
+        } else {
+            if (operator.isEmpty()) {
+                return;
+            }
+
+            outputLabel.setText(String.valueOf(model.functions(initialNum, Double.parseDouble(outputLabel.getText()),operator)));
+            operator = "";
+        }
     }
+
 
     @FXML
     public void enterNumber(ActionEvent event) {
@@ -52,21 +52,15 @@ public class Controller {
 
     }
 
-
-    public void addNumber0 () {
-
-    }
-
-    public void addNumber1 () {
-     calcList.add(1.0);
-     String output = outputLabel.getText();
-     outputLabel.setText(output);
-    }
-
-
-    public void clear () {
-        calcList.clear();
+    public void clear() {
+        // clear();
         outputLabel.setText("");
+
+    }
+
+
+    public void delete() {
+        outputLabel.setText( outputLabel.getText().substring(0, outputLabel.getText().length()-1));
 
     }
 
