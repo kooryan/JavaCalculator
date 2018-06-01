@@ -8,17 +8,22 @@ import javafx.stage.Stage;
 
 public class Main extends Application  {
 
+//    Controller controller = new Controller();
+
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("4function.fxml"));
         primaryStage.setTitle("Java Calculator");
         primaryStage.setScene(new Scene(root, 326, 451));
         primaryStage.show();
+
+        
     }
 
 
     public static void main(String[] args) {
         launch(args);
+
 
     }
 }

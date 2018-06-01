@@ -8,16 +8,13 @@ public class Model {
                 return num1 + num2;
             case "-" :
                 return num1 - num2;
-            case "x" :
-                if (num1 == 0 || num2 ==0) {
-                    return 0;
-                }
+            case "×" :
                 return num1 * num2;
             case "÷" :
-                if (num1 == 0) {
-                    return 0;
-                } else if (num2 == 0) {
-                    System.err.println("Undefined");
+                if (num2 == 0) {
+                    System.err.println("System Error: Number is undefined");
+//                    return (Integer) null;  -> return error or something
+                    return 420;
                 }
                 return num1 / num2;
         }
