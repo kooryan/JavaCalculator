@@ -7,26 +7,32 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
+import java.awt.*;
+
 public class Main extends Application  {
 
 //    Controller controller = new Controller();
 
     @Override
     public void start(Stage primaryStage) throws Exception{
+        /** System.setProperty("com.apple.mrj.application.apple.menu.about.name", "Calculator"); */
+
         Parent root = FXMLLoader.load(getClass().getResource("4function.fxml"));
-        Image applicationIcon = new Image(getClass().getResourceAsStream("calculatoricon2.png"));
-        primaryStage.getIcons().add(applicationIcon);
+        primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("calculatoricon2.png")));
         primaryStage.setTitle("Java Calculator");
+
+        java.awt.Image dockIcon = Toolkit.getDefaultToolkit().getImage(getClass().getResource("calculatoricon2.png"));
+        Taskbar taskbar = Taskbar.getTaskbar();
+        taskbar.setIconImage(dockIcon);
+
         primaryStage.setScene(new Scene(root, 326, 451));
         primaryStage.show();
-
-        
     }
+
 
 
     public static void main(String[] args) {
         launch(args);
-
 
     }
 }

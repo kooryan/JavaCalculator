@@ -18,19 +18,19 @@
       <Button layoutX="257.0" layoutY="396.0" mnemonicParsing="false" onAction="#calculations" prefHeight="54.0" prefWidth="83.0" text="=" textAlignment="RIGHT" />
       <Button id="cancel-button" fx:id="cancelButton" layoutX="14.0" layoutY="396.0" maxWidth="159.0" mnemonicParsing="false" onAction="#clear" prefHeight="60.0" prefWidth="141.0" text="A/C" />
       <Button layoutX="176.0" layoutY="396.0" mnemonicParsing="false" onAction="#delete" prefHeight="54.0" prefWidth="83.0" text="&lt;-" />
-      <Label id="output-label" fx:id="outputLabel" alignment="CENTER_RIGHT" layoutX="7.0" layoutY="33.0" prefHeight="41.0" prefWidth="315.0">
+      <Label id="output-label" fx:id="outputLabel" alignment="CENTER_RIGHT" layoutX="11.0" layoutY="39.0" prefHeight="60.0" prefWidth="306.0" textAlignment="JUSTIFY">
          <font>
             <Font name="AGaramondPro-Regular" size="35.0" />
          </font>
       </Label>
-      <Label id="auxiliary-label" fx:id="auxiliaryLabel" alignment="CENTER_RIGHT" layoutX="71.0" layoutY="4.0" prefHeight="19.0" prefWidth="250.0" textFill="#800101">
+      <Label id="auxiliary-label" fx:id="auxiliaryLabel" alignment="CENTER_RIGHT" layoutX="46.0" layoutY="14.0" prefHeight="21.0" prefWidth="270.0" textFill="#800101">
          <font>
             <Font name="AdobeHebrew-Regular" size="13.0" />
          </font>
       </Label>
-  <AnchorPane layoutX="15.0" layoutY="87.0" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+  <AnchorPane layoutX="3.0" layoutY="103.0" minHeight="0.0" minWidth="0.0" prefHeight="295.0" prefWidth="328.0">
          <children>
-              <GridPane layoutX="2.0" prefHeight="300.0" prefWidth="320.0">
+              <GridPane layoutY="60.0" prefHeight="252.0" prefWidth="320.0">
                   <columnConstraints>
                       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />

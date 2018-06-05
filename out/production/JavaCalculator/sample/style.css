@@ -2,7 +2,7 @@
 
 * {
     -fx-font-family: 'Open Sans', sans-serif;
-    -fx-background-color: white;
+    -fx-background-color: transparent;
 }
 
 
@@ -22,22 +22,26 @@
 
 .button {
 -fx-background-color: #DCB3B3;
--fx-font-size: 25px;
+-fx-font-size: 20px;
 -fx-background-radius: 4em;
-                -fx-min-width: 60px;
-                -fx-min-height: 60px;
-                -fx-max-width: 60px;
-                -fx-max-height: 60px;
+                -fx-min-width: 50px;
+                -fx-min-height: 50px;
+                -fx-max-width: 50px;
+                -fx-max-height: 50px;
 }
 
 
 #cancel-button {
 -fx-font-size: 25px;
 -fx-background-radius: 4em;
-                -fx-min-width: 60px;
-                -fx-min-height: 60px;
+                -fx-min-width: 50px;
+                -fx-min-height: 50px;
                 -fx-max-width: 300px;
-                -fx-max-height: 60px;
+                -fx-max-height: 50px;
+}
+
+.AnchorPane {
+-fx-background-color: rgba(0, 100, 100, 0.5);
 }
 
 

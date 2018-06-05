@@ -57,8 +57,11 @@ public class Controller {
             if (operator.isEmpty()) {
                 return;
             }
-                outputLabel.setText(String.valueOf(model.functions(initialNum, Double.parseDouble(outputLabel.getText()), operator)));
-                operator = "";
+
+            //test : shorten later
+            auxiliaryLabel.setText(auxiliaryLabel.getText() + " " + outputLabel.getText() + " = " + String.valueOf(model.functions(initialNum, Double.parseDouble(outputLabel.getText()), operator)));
+            outputLabel.setText(String.valueOf(model.functions(initialNum, Double.parseDouble(outputLabel.getText()), operator)));
+            operator = "";
         }
     }
 
@@ -73,13 +76,6 @@ public class Controller {
     }
 
     public void clear() throws InterruptedException{
-
-        // clear();
-//        outputLabel.setText("CLEARED");
-//
-//
-//        Thread.sleep(3000);
-
         outputLabel.setText("");
         auxiliaryLabel.setText("");
 
