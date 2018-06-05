@@ -7,15 +7,16 @@
 
 
 #output-label {
-     -fx-font-size: 30px;
+     -fx-font-size: 45px;
      -fx-font-weight: normal;
      -fx-background-radius: 13;
      -fx-background-color: #AFAFAF;
+     -fx-text-size-adjust: auto;
 }
 
 #auxiliary-label {
 /* -fx-border-style: line; */
--fx-font-size: 12px;
+-fx-font-size: 10px;
 -fx-background-radius: 13;
 -fx-background-color: #EAEAEA;
 }
@@ -24,20 +25,20 @@
 -fx-background-color: #DCB3B3;
 -fx-font-size: 20px;
 -fx-background-radius: 4em;
-                -fx-min-width: 50px;
-                -fx-min-height: 50px;
-                -fx-max-width: 50px;
-                -fx-max-height: 50px;
+                -fx-min-width: 45px;
+                -fx-min-height: 45px;
+                -fx-max-width: 45px;
+                -fx-max-height: 45px;
 }
 
 
 #cancel-button {
 -fx-font-size: 25px;
 -fx-background-radius: 4em;
-                -fx-min-width: 50px;
-                -fx-min-height: 50px;
+                -fx-min-width: 45px;
+                -fx-min-height: 45px;
                 -fx-max-width: 300px;
-                -fx-max-height: 50px;
+                -fx-max-height: 45px;
 }
 
 .AnchorPane {
