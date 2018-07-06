@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
+
 * {
     -fx-font-family: 'Open Sans', sans-serif;
     -fx-background-color: transparent;
@@ -8,10 +9,9 @@
 
 #output-label {
      -fx-font-size: 45px;
-     -fx-font-weight: normal;
      -fx-background-radius: 13;
      -fx-background-color: #AFAFAF;
-     -fx-text-size-adjust: auto;
+
 }
 
 #auxiliary-label {
@@ -22,27 +22,34 @@
 }
 
 .button {
--fx-background-color: #DCB3B3;
+-fx-background-color: #DFDCDC;
 -fx-font-size: 20px;
+-fx-text-overflow: clip;
 -fx-background-radius: 4em;
-                -fx-min-width: 45px;
-                -fx-min-height: 45px;
-                -fx-max-width: 45px;
-                -fx-max-height: 45px;
+                -fx-min-width: 50px;
+                -fx-min-height: 50px;
+                -fx-max-width: 50px;
+                -fx-max-height: 50px;
 }
 
 
 #cancel-button {
 -fx-font-size: 25px;
 -fx-background-radius: 4em;
-                -fx-min-width: 45px;
-                -fx-min-height: 45px;
+                -fx-min-width: 50px;
+                -fx-min-height: 50px;
                 -fx-max-width: 300px;
-                -fx-max-height: 45px;
+                -fx-max-height: 50px;
 }
 
-.AnchorPane {
--fx-background-color: rgba(0, 100, 100, 0.5);
+#negative {
+-fx-font-size: 19px;
+-fx-text-align: center;
+-fx-display: flex;
+}
+
+#operator {
+-fx-background-color: #F9BDBD;
 }
 
 

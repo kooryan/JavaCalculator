@@ -25,7 +25,7 @@ public class Main extends Application  {
         Taskbar taskbar = Taskbar.getTaskbar();
         taskbar.setIconImage(dockIcon);
 
-        primaryStage.setScene(new Scene(root, 325, 460));
+        primaryStage.setScene(new Scene(root, 297, 460));
         primaryStage.show();
     }
 

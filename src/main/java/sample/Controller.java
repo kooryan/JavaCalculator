@@ -6,6 +6,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
+
+
 public class Controller {
 
     @FXML
@@ -39,10 +41,27 @@ public class Controller {
 
     }
 
+//    public void initialize() {
+//        Double fontSize = outputLabel.getFont().getSize();
+//        String clippedText = Utils.computeClippedText( outputLabel.getFont(), outputLabel.getText(), outputLabel.getWidth(), outputLabel.getTextOverrun(), outputLabel.getEllipsisString() );
+//        Font newFont = outputLabel.getFont();
+//
+//
+//        outputLabel.textProperty().addListener((observable, oldValue, newValue) -> {
+//            System.out.println( "fontSize = " + fontSize + ", clippedText = " + clippedText );
+//            fontSize = fontSize - 0.05;
+//            newFont = Font.font( outputLabel.getFont().getFamily(), fontSize );
+//            clippedText = Utils.computeClippedText( newFont, outputLabel.getText(), outputLabel.getWidth(), outputLabel.getTextOverrun(), outputLabel.getEllipsisString() );
+//        });
+//        outputLabel.setFont( newFont );
+//    }
+
 
     public void calculations(ActionEvent event) {
 
         String operatorVal = ((Button) event.getSource()).getText();
+
+//        Button allButtons = (Button) event.getSource();
 
         if (!"=".equals(operatorVal)) {
             if (!operator.isEmpty()) {
@@ -59,7 +78,7 @@ public class Controller {
             }
 
             //test : shorten later
-            auxiliaryLabel.setText(auxiliaryLabel.getText() + " " + outputLabel.getText() + " = " + String.valueOf(model.functions(initialNum, Double.parseDouble(outputLabel.getText()), operator)));
+            auxiliaryLabel.setText(auxiliaryLabel.getText() + " " + outputLabel.getText() + " = " + String.valueOf(model.functions(initialNum, Double.parseDouble(outputLabel.getText()), operator)) + "  ");
             outputLabel.setText(String.valueOf(model.functions(initialNum, Double.parseDouble(outputLabel.getText()), operator)));
             operator = "";
         }
@@ -75,15 +94,26 @@ public class Controller {
 
     }
 
-    public void clear() throws InterruptedException{
+    public void clear() throws InterruptedException {
         outputLabel.setText("");
         auxiliaryLabel.setText("");
 
     }
 
     public void delete() {
-        outputLabel.setText(outputLabel.getText().substring(0, outputLabel.getText().length()-1));
+        if (!"".equals(outputLabel.getText())) {
+            outputLabel.setText(outputLabel.getText().substring(0, outputLabel.getText().length() - 1));
+        } else {
 
+        }
+    }
+
+    public void plus_negative() {
+        if ("".equals(outputLabel.getText())) {
+
+        } else {
+            outputLabel.setText("-" + outputLabel.getText());
+        }
     }
 
 
