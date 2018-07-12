@@ -42,6 +42,12 @@
                 -fx-max-height: 50px;
 }
 
+#delete-button {
+-fx-font-size: 15px;
+-fx-text-align: center;
+-fx-display: flex;
+}
+
 #negative {
 -fx-font-size: 19px;
 -fx-text-align: center;

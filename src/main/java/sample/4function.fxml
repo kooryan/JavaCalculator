@@ -17,7 +17,7 @@
     <children>
       <Button layoutX="221.0" layoutY="396.0" mnemonicParsing="false" onAction="#calculations" prefHeight="54.0" prefWidth="83.0" text="=" textAlignment="RIGHT" />
       <Button id="cancel-button" fx:id="cancelButton" layoutX="29.0" layoutY="396.0" maxWidth="159.0" mnemonicParsing="false" onAction="#clear" prefHeight="50.0" prefWidth="112.0" text="A/C" />
-      <Button layoutX="158.0" layoutY="396.0" mnemonicParsing="false" onAction="#delete" prefHeight="54.0" prefWidth="83.0" text="&lt;" />
+      <Button id="delete-button" layoutX="158.0" layoutY="396.0" mnemonicParsing="false" onAction="#delete" prefHeight="54.0" prefWidth="83.0" text="del" />
       <Label id="output-label" fx:id="outputLabel" alignment="BOTTOM_RIGHT" layoutX="23.0" layoutY="43.0" prefHeight="90.0" prefWidth="252.0" textAlignment="JUSTIFY" textOverrun="CLIP">
          <font>
             <Font name="AGaramondPro-Regular" size="35.0" />
