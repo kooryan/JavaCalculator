@@ -3,9 +3,12 @@ package sample;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-
+import javafx.scene.layout.Pane;
+import javafx.stage.Stage;
 
 
 public class Controller {
@@ -21,9 +24,6 @@ public class Controller {
     private double initialNum = 0;
 
     private Model model = new Model();
-
-//    FXMLLoader fourFunction = new FXMLLoader(getClass().getResource("4function.fxml"));
-//    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("----.fxml"));
 
 
 /*        while (!auxiliaryLabel.getText().isEmpty() || !outputLabel.getText().isEmpty()) {
@@ -116,5 +116,10 @@ public class Controller {
         }
     }
 
+    @FXML
+    private void handleButtonAction(ActionEvent event) {
+        Stage stageTheEventSourceNodeBelongs = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        stageTheEventSourceNodeBelongs.setScene(new Scene(new Pane()));
+    }
 
 }

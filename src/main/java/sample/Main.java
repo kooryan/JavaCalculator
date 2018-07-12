@@ -12,12 +12,14 @@ import java.awt.*;
 public class Main extends Application  {
 
 //    Controller controller = new Controller();
+    private Stage stage;
 
     @Override
     public void start(Stage primaryStage) throws Exception{
         /** System.setProperty("com.apple.mrj.application.apple.menu.about.name", "Calculator"); */
 
         Parent root = FXMLLoader.load(getClass().getResource("4function.fxml"));
+
         primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("calculatoricon2.png")));
         primaryStage.setTitle("Java Calculator");
 
@@ -27,6 +29,7 @@ public class Main extends Application  {
 
         primaryStage.setScene(new Scene(root, 297, 460));
         primaryStage.show();
+
     }
 
 
