@@ -21,7 +21,7 @@ public class Main extends Application  {
         Parent root = FXMLLoader.load(getClass().getResource("4function.fxml"));
 
         primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("calculatoricon2.png")));
-        primaryStage.setTitle("Java Calculator");
+        primaryStage.setTitle("Calculator");
 
         java.awt.Image dockIcon = Toolkit.getDefaultToolkit().getImage(getClass().getResource("calculatoricon2.png"));
         Taskbar taskbar = Taskbar.getTaskbar();
@@ -29,6 +29,7 @@ public class Main extends Application  {
 
         primaryStage.setScene(new Scene(root, 297, 460));
         primaryStage.show();
+
 
     }
 

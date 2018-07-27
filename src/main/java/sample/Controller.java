@@ -2,14 +2,8 @@ package sample;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.layout.Pane;
-import javafx.stage.Stage;
-
 
 public class Controller {
 
@@ -26,20 +20,14 @@ public class Controller {
     private Model model = new Model();
 
 
+    // switch to scene 2
+
+
 /*        while (!auxiliaryLabel.getText().isEmpty() || !outputLabel.getText().isEmpty()) {
             cancelButton.setText("C");
         }*/
 
-    public void switchScene() {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("----.fxml"));
-
-
-//        Scene scene = .getScene();
-//        Window window = scene.getWindow();
-//        Stage stage = (Stage) window;
-
-
-    }
+/** resize text according to the amount of text in the label */
 
 //    public void initialize() {
 //        Double fontSize = outputLabel.getFont().getSize();
@@ -94,7 +82,7 @@ public class Controller {
 
     }
 
-    public void clear() throws InterruptedException {
+    public void clear() {
         outputLabel.setText("");
         auxiliaryLabel.setText("");
 
@@ -115,11 +103,4 @@ public class Controller {
             outputLabel.setText("-" + outputLabel.getText());
         }
     }
-
-    @FXML
-    private void handleButtonAction(ActionEvent event) {
-        Stage stageTheEventSourceNodeBelongs = (Stage) ((Node)event.getSource()).getScene().getWindow();
-        stageTheEventSourceNodeBelongs.setScene(new Scene(new Pane()));
-    }
-
 }
